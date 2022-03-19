@@ -1,16 +1,17 @@
 let searchform = document.querySelector(".search-form");
 let searchbutton = document.querySelector(".search-button");
+
 searchbutton.addEventListener("click", function (e) {
   e.preventDefault();
+
   let city = document.querySelector(".input-city").value;
   console.log(city);
   document.querySelector(".input-city").value = "";
-
   fetch(
     "https://api.openweathermap.org/data/2.5/weather?q=" +
       city +
       "&units=imperial&appid=" +
-      "b7b2ffa6829a7ba12b1433447c54d162"
+      "API KEY"
   )
     .then((response) => {
       if (!response.ok) {
@@ -40,10 +41,29 @@ searchbutton.addEventListener("click", function (e) {
       //displaying on Page
 
       document.querySelector(".Weather").classList.remove("invisible");
+
       citySection.innerHTML = " " + city;
-      descriptionSection.innerHTML = description;
+  
       temperatureSection.innerHTML = "Temperature:" + " " + temperature + "F";
       humiditySection.innerHTML = "Humidity:" + " " + humidity + "%";
       windSpeedSection.innerHTML = "Windspeed:" + " " + windspeed + "mph";
+
+      //Changing background image based on weather
+      descriptionSection.innerHTML = description;
+      console.log(descriptionSection.innerHTML);
+      descriptionSection.innerHTML == "Clear"
+        ? Sunny()
+        : (document.querySelector(".background-image").style.backgroundImage =
+            "url('./cloudy.jpg')");
     });
 });
+/*  function changeBackground() {
+   document.querySelector(".background-image").style.backgroundImage =
+     "url('sunny.jpg')";
+ } */
+
+
+function Sunny() {
+  document.querySelector(".background-image").style.backgroundImage =
+    "url('./sunny.jpg')";
+}
