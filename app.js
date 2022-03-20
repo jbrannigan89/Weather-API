@@ -11,7 +11,7 @@ searchbutton.addEventListener("click", function (e) {
     "https://api.openweathermap.org/data/2.5/weather?q=" +
       city +
       "&units=imperial&appid=" +
-      "{API HERE}"
+      "b7b2ffa6829a7ba12b1433447c54d162"
   )
     .then((response) => {
       if (!response.ok) {
@@ -43,7 +43,7 @@ searchbutton.addEventListener("click", function (e) {
       document.querySelector(".Weather").classList.remove("invisible");
 
       citySection.innerHTML = " " + city;
-  
+
       temperatureSection.innerHTML = "Temperature:" + " " + temperature + "F";
       humiditySection.innerHTML = "Humidity:" + " " + humidity + "%";
       windSpeedSection.innerHTML = "Windspeed:" + " " + windspeed + "mph";
@@ -62,8 +62,9 @@ searchbutton.addEventListener("click", function (e) {
      "url('sunny.jpg')";
  } */
 
-
 function Sunny() {
   document.querySelector(".background-image").style.backgroundImage =
     "url('./sunny.jpg')";
 }
+
+
