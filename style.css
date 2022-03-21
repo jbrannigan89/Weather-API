@@ -67,7 +67,7 @@ h3 {
   font-size: 2.5em;
 }
 .Weather {
-  text-align: center;
+  text-align: center;background: rgba(93, 105, 79, 0.829);padding: 1em;border-radius: 1em;
 }
 .invisible {
   visibility: hidden;

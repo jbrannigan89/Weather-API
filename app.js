@@ -67,5 +67,4 @@ function Sunny() {
     "url('./sunny.jpg')";
 }
 
-let APIkey = config.myKey;
-console.log(APIkey)
+
