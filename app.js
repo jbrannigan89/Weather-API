@@ -11,7 +11,7 @@ searchbutton.addEventListener("click", function (e) {
     "https://api.openweathermap.org/data/2.5/weather?q=" +
       city +
       "&units=imperial&appid=" +
-      "b7b2ffa6829a7ba12b1433447c54d162"
+      "APIKEY"
   )
     .then((response) => {
       if (!response.ok) {
@@ -44,7 +44,7 @@ searchbutton.addEventListener("click", function (e) {
 
       citySection.innerHTML = " " + city;
 
-      temperatureSection.innerHTML = "Temperature:" + " " + temperature + "F";
+      temperatureSection.innerHTML = temperature + "F";
       humiditySection.innerHTML = "Humidity:" + " " + humidity + "%";
       windSpeedSection.innerHTML = "Windspeed:" + " " + windspeed + "mph";
 
@@ -67,4 +67,5 @@ function Sunny() {
     "url('./sunny.jpg')";
 }
 
-
+let APIkey = config.myKey;
+console.log(APIkey)

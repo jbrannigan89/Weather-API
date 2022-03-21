@@ -1,0 +1,1 @@
+var config = {myKey: '8cb94f74745196a6dd1b18c4565e19a1'}
