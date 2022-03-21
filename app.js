@@ -11,7 +11,7 @@ searchbutton.addEventListener("click", function (e) {
     "https://api.openweathermap.org/data/2.5/weather?q=" +
       city +
       "&units=imperial&appid=" +
-      "APIKEY"
+      APIKEY.myKey
   )
     .then((response) => {
       if (!response.ok) {
@@ -67,4 +67,4 @@ function Sunny() {
     "url('./sunny.jpg')";
 }
 
-
+console.log( APIKEY )
