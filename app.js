@@ -11,7 +11,7 @@ searchbutton.addEventListener("click", function (e) {
     "https://api.openweathermap.org/data/2.5/weather?q=" +
       city +
       "&units=imperial&appid=" +
-      APIKEY.myKey
+      "API KEY HERE"
   )
     .then((response) => {
       if (!response.ok) {
